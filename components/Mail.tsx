@@ -15,9 +15,7 @@ export default function Mail({ mail,setMail }: { mail: MailProps,setMail:()=>voi
           <p className="text-sm font-medium truncate text-white">
             {mail.subject}
           </p>
-          <p className="text-sm truncate text-gray-400">
-            {mail.content}
-          </p>
+          <p className="text-sm truncate text-gray-400" dangerouslySetInnerHTML={{__html:mail.content}} />
         </div>
       </div>
     </li>

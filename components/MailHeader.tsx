@@ -8,7 +8,7 @@ export default function MailHeader({
 }: {
   mail: MailProps;
   deleteMail: () => void;
-  flagMail: (guid: string) => void;
+  flagMail: () => void;
 }) {
   return (
     <header>
