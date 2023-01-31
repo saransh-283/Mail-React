@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header>
-      <nav className="border-gray-200 px-5 py-2.5 bg-gray-900">
+      <nav className="px-5 py-2.5 bg-gray-900 border-b border-gray-700">
         <Link href="/">
           <div className="flex gap-4 items-center">
             <EnvelopeIcon className="h-6 w-6 text-blue-100" />

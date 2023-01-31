@@ -1,8 +1,8 @@
 import MailProps from "../interfaces/mail";
 
-export default function Mail({ mail,setContent }: { mail: MailProps,setContent:(content:string)=>void }) {
+export default function Mail({ mail,setMail }: { mail: MailProps,setMail:()=>void }) {
   return (
-    <li onClick={()=>setContent(mail.content)} className="cursor-pointer hover:bg-gray-700 pb-3 sm:pb-4">
+    <li onClick={setMail} className="cursor-pointer hover:bg-gray-700 pb-3 sm:pb-4">
       <div className="flex items-center space-x-4">
         <div className="flex-shrink-0">
           <img

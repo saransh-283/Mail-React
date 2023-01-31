@@ -6,10 +6,10 @@ import Mail from "./Mail";
 
 export default function Mails({
   mails,
-  setContent,
+  setMail,
 }: {
   mails: MailProps[];
-  setContent: (content: string) => void;
+  setMail: (mail: MailProps) => void;
 }) {
   const [all, setAll] = useState(mails);
 
@@ -77,9 +77,7 @@ export default function Mails({
         {all.map((mail) => (
           <Mail
             mail={mail}
-            setContent={(content: string) => {
-              setContent(content);
-            }}
+            setMail={()=>setMail(mail)}
             key={mail.guid}
           />
         ))}
