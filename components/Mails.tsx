@@ -1,5 +1,5 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import MailProps from "../interfaces/mail";
 import Filter from "./Filter";
 import Mail from "./Mail";
@@ -11,8 +11,8 @@ export default function Mails({
   mails: MailProps[];
   setMail: (mail: MailProps) => void;
 }) {
-  const [all, setAll] = useState(mails);
-
+  const [all, setAll] = useState([]);
+  useEffect(() => setAll(mails), [mails]);
   const filterAll = () => {
     setAll(mails);
   };
@@ -50,6 +50,7 @@ export default function Mails({
     );
     setAll(tmp);
   };
+
   return (
     <Fragment>
       <form className="flex justify-between gap-2 items-center p-2 mb-2">
@@ -75,11 +76,7 @@ export default function Mails({
 
       <ul className="max-w-md mt-4 divide-y divide-gray-200 dark:divide-gray-700">
         {all.map((mail) => (
-          <Mail
-            mail={mail}
-            setMail={()=>setMail(mail)}
-            key={mail.guid}
-          />
+          <Mail mail={mail} setMail={() => setMail(mail)} key={mail.guid} />
         ))}
       </ul>
     </Fragment>
