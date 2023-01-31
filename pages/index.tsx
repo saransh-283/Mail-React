@@ -3,10 +3,8 @@ import { Fragment } from 'react'
 
 const IndexPage = () => (
   <Fragment>
-    <h1 className='text-red-500 text-center'>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">About</Link>
-    </p>
+    <div className='overflow-y-scroll w-60 border-x border-gray-700 p-5 bg-gray-900'>knbkb</div>
+    <div className='overflow-y-scroll flex-1 p-5 bg-gray-700'></div>
   </Fragment>
 )
 
