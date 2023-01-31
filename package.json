@@ -10,7 +10,8 @@
     "@heroicons/react": "^2.0.14",
     "next": "latest",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "swr": "^2.0.3"
   },
   "devDependencies": {
     "@types/node": "^12.12.21",
