@@ -2,6 +2,9 @@
 
 <hr>
 
+## Preview of the solution can be seen at https://mail-react-one.vercel.app/
+
+
 ### E-mail Client
 
 The goal of this assignment is to build a prototype email client.
