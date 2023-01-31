@@ -2,6 +2,7 @@
   {
     "guid": "640c4300bc474531aab7842940eed2a9",
     "unread": true,
+    "flagged": false,
     "subject": "Pre Approved Loan",
     "content": "Congratulations ! <u>Credit card<u> is being shipped to you today!",
     "userImg": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
@@ -9,6 +10,7 @@
   {
     "guid": "3315f15fd5a8447f97e8eccca46a72f3",
     "unread": true,
+    "flagged": false,
     "subject": "You won a lottery!",
     "content": "You have just won the New York official lottery. Please send us your address so that we may start the transfer.",
     "userImg": "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
