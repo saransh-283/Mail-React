@@ -1,7 +1,15 @@
 import { FlagIcon, TrashIcon } from "@heroicons/react/24/solid";
 import MailProps from "../interfaces/mail";
 
-export default function MailHeader({ mail,deleteMail }: { mail: MailProps,deleteMail:()=>void }) {
+export default function MailHeader({
+  mail,
+  deleteMail,
+  flagMail,
+}: {
+  mail: MailProps;
+  deleteMail: () => void;
+  flagMail: (guid: string) => void;
+}) {
   return (
     <header>
       <nav className="px-5 py-2.5 bg-gray-900 border-b border-gray-700">
@@ -17,7 +25,10 @@ export default function MailHeader({ mail,deleteMail }: { mail: MailProps,delete
             </span>
           </div>
           <div className="justify-between items-center flex gap-2">
-            <div className="border-gray-600 hover:bg-gray-700 cursor-pointer border inline-flex w-full justify-center p-2 text-sm font-medium text-white focus:outline-none">
+            <div
+              onClick={flagMail}
+              className="border-gray-600 hover:bg-gray-700 cursor-pointer border inline-flex w-full justify-center p-2 text-sm font-medium text-white focus:outline-none"
+            >
               <FlagIcon
                 className={`h-4 w-4 ${
                   mail.flagged
@@ -28,7 +39,10 @@ export default function MailHeader({ mail,deleteMail }: { mail: MailProps,delete
               />
             </div>
 
-            <div onClick={deleteMail} className="border-gray-600 hover:bg-gray-700 cursor-pointer border inline-flex w-full justify-center p-2 text-sm font-medium text-white focus:outline-none">
+            <div
+              onClick={deleteMail}
+              className="border-gray-600 hover:bg-gray-700 cursor-pointer border inline-flex w-full justify-center p-2 text-sm font-medium text-white focus:outline-none"
+            >
               <TrashIcon
                 className={`h-4 w-4 text-red-600`}
                 aria-hidden="true"

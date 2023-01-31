@@ -23,7 +23,15 @@ const IndexPage = () => {
     tmp.splice(tmp.findIndex(mail=>mail.guid===guid), 1);
     setMails(tmp)
     setMail(undefined)
-}
+  }
+  
+  const flagMail=(guid: string) => {
+    let tmp = [...mails]
+    let index = tmp.findIndex(mail => mail.guid === guid);
+    tmp[index].flagged=!tmp[index].flagged
+    setMails(tmp)
+  }
+  
   if (error) return <div>Failed to load</div>;
 
   if (!data) return <div>Loading...</div>;
@@ -33,7 +41,7 @@ const IndexPage = () => {
       <div className="overflow-y-scroll w-80 border-x border-gray-700 p-5 bg-gray-900">
         <Mails setMail={(mail: MailProps) => setMail(mail)} mails={mails} />
       </div>
-      <Preview deleteMail={deleteMail} mail={mail} />
+      <Preview flagMail={flagMail} deleteMail={deleteMail} mail={mail} />
     </Fragment>
   );
 };
